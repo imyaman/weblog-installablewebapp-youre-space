@@ -25,6 +25,7 @@
 <script type="application/javascript">
 
 console.log('start my code');
+console.log(window.location);
 
 var root = null;
 var useHash = true; // Defaults to: false
@@ -49,13 +50,13 @@ router
   .resolve();
 
 router
-  .on('#article/:id', function (params) {
+  .on('/article/:id', function (params) {
     console.log('this is article handler');
+    console.log(window.location);
 
     theIdUrl = params.id;
-    console.log(window.location);
     console.log(theIdUrl);
-    $.get("//weblog.youre.space/baas/bodyonly/" + theIdUrl + ".html", function( data ) {
+    $.get("https://weblog.youre.space/baas/bodyonly/" + theIdUrl + ".html", function( data ) {
       $( "#result" ).html( data );
     });
 
