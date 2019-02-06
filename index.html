@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:title" content="title">
-<meta property="og:description" content="description">
+<meta property="og:title" content="YOUR E-SPACE WEBLOG">
+<meta property="og:description" content="YOUR E-SPACE가 제공하는 WEBLOG 서비스입니다. 글쓴이가 자기 글의 완전한 소유자가 되도록, 설치형 블로그를 나누고 있습니다.">
 </head>
 <body>
 
@@ -42,6 +42,7 @@ router
   .on('#article/:id', function (params) {
     theIdUrl = params.id;
     console.log('this is article handler');
+    console.log(window.location);
     console.log(theIdUrl);
     $.get("http://connexus.youre.space/baas/bodyonly/" + theIdUrl + ".html", function( data ) {
       $( "#result" ).html( data );
