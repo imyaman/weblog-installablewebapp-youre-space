@@ -24,6 +24,8 @@
 
 <script type="application/javascript">
 
+console.log('start my code');
+
 var root = null;
 var useHash = true; // Defaults to: false
 var hash = '#'; // can be : '#', '#!'
@@ -60,6 +62,7 @@ $(".button").click(function(){
   console.log(  theId  );
 
   $(location).attr('href','#article/' + theId);
+  window.location = '#article' + theId;
 });
 
 </script> <!-- end of js -->
